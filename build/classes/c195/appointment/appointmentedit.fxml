@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="557.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195.appointment.AppointmenteditController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="557.0" prefWidth="411.0">
+         <children>
+            <Label text="Edit Selected Appointment">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="378.0" prefWidth="328.0">
+               <children>
+                  <GridPane prefHeight="365.0" prefWidth="273.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Customer:" GridPane.rowIndex="1" />
+                        <Label text="Title of the Appointment:" wrapText="true" GridPane.rowIndex="2" />
+                        <Label text="Description:" GridPane.rowIndex="3" />
+                        <Label text="Location:" GridPane.rowIndex="4" />
+                        <Label text="Contact:" GridPane.rowIndex="5" />
+                        <Label text="Type of appointment:" GridPane.rowIndex="6" />
+                        <Label text="URL:" GridPane.rowIndex="7" />
+                        <Label text="Date" GridPane.rowIndex="8" />
+                        <Label text="Start time:" GridPane.rowIndex="9" />
+                        <Label text="End time:" GridPane.rowIndex="10" />
+                        <Label text="Created by:" GridPane.rowIndex="11" />
+                        <ComboBox fx:id="custSlct" prefWidth="150.0" promptText="Select customer" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="titleTxt" promptText="Title" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="descripTxt" promptText="Optional" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="locTxt" promptText="Optional" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="conTxt" promptText="Optional" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="typeSlct" prefWidth="150.0" promptText="Select type" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="urlTxt" promptText="Optional" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <DatePicker fx:id="dateSlct" promptText="Select date" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <ComboBox fx:id="startSlct" prefWidth="150.0" promptText="Slect start time" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <ComboBox fx:id="endSlct" prefWidth="150.0" promptText="Select end time" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <TextField fx:id="userTxt" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="542.0">
+               <children>
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#clickOnSaveBtn" style="-fx-background-color: palegreen; -fx-border-color: green;" text="Save">
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#clickOnCancelBtn" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <effect>
+      <SepiaTone level="0.1" />
+   </effect>
+</AnchorPane>
